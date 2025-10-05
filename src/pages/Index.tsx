@@ -1,45 +1,49 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles, ShoppingBag, Zap, Star, Heart, Truck } from "lucide-react";
+import { Sparkles, ShoppingBag, Zap, Star, Award, Truck } from "lucide-react";
 
 const Index = () => {
   const products = [
     {
       id: 1,
-      name: "Cosmic Blend Signature",
-      price: "$24.99",
-      image: "https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=500&h=500&fit=crop",
-      tag: "Bestseller"
+      name: "Blendtec Connoisseur C825",
+      price: "$799.99",
+      image: "https://images.unsplash.com/photo-1570831739435-6601aa3fa4fb?w=500&h=500&fit=crop",
+      tag: "Bestseller",
+      specs: "3.8 HP Motor | 100+ Cycles"
     },
     {
       id: 2,
-      name: "Nebula Dark Roast",
-      price: "$26.99",
-      image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=500&h=500&fit=crop",
-      tag: "New"
+      name: "Vitamix E310 Explorian",
+      price: "$349.95",
+      image: "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500&h=500&fit=crop",
+      tag: "Popular",
+      specs: "2.0 HP Motor | 48 oz Container"
     },
     {
       id: 3,
-      name: "Stellar Light Blend",
-      price: "$22.99",
-      image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&h=500&fit=crop",
-      tag: "Popular"
+      name: "Blendtec Professional 800",
+      price: "$549.99",
+      image: "https://images.unsplash.com/photo-1584990347449-39e5b0835163?w=500&h=500&fit=crop",
+      tag: "Pro Choice",
+      specs: "3.8 HP Motor | Touch Screen"
     },
     {
       id: 4,
-      name: "Galaxy Espresso",
-      price: "$28.99",
-      image: "https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=500&h=500&fit=crop",
-      tag: "Premium"
+      name: "Vitamix A3500 Ascent",
+      price: "$649.95",
+      image: "https://images.unsplash.com/photo-1610432990145-a2d35d3fe2c6?w=500&h=500&fit=crop",
+      tag: "Premium",
+      specs: "Self-Detect Technology"
     }
   ];
 
   const features = [
-    { icon: Zap, title: "Freshly Roasted", description: "Every batch roasted to perfection" },
-    { icon: Star, title: "Premium Quality", description: "Only the finest beans selected" },
-    { icon: Heart, title: "Ethically Sourced", description: "Supporting sustainable farming" },
-    { icon: Truck, title: "Fast Delivery", description: "Free shipping on orders over $50" }
+    { icon: Zap, title: "Professional Grade", description: "Commercial-quality performance" },
+    { icon: Star, title: "Top Brands", description: "Authorized Blendtec & Vitamix dealer" },
+    { icon: Award, title: "Warranty Included", description: "Full manufacturer warranties" },
+    { icon: Truck, title: "Fast Shipping", description: "Free delivery on wholesale orders" }
   ];
 
   return (
@@ -76,19 +80,19 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="mb-6 bg-white/10 text-white border-white/20 hover:bg-white/20 backdrop-blur-sm">
-              ✨ Premium Coffee Experience
+              ✨ Authorized Blendtec & Vitamix Dealer
             </Badge>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Where Every Cup
+              Professional Blending
               <br />
               <span className="bg-gradient-to-r from-[hsl(var(--cosmic-gold))] to-[hsl(var(--cosmic-gold-dark))] bg-clip-text text-transparent">
-                Tells a Story
+                Starts Here
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Experience the cosmic blend of flavor and quality. Handcrafted coffee roasted to perfection for those who seek extraordinary.
+              Premium blenders from Blendtec and Vitamix. Retail and wholesale solutions for commercial and home use.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -142,14 +146,14 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-accent/10 text-accent border-accent/20">
-              Featured Collection
+              Featured Products
             </Badge>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Discover Our
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Cosmic Blends</span>
+              Premium
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Blending Solutions</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Each blend is carefully crafted to deliver an out-of-this-world experience
+              Top-tier Blendtec and Vitamix models for every need and budget
             </p>
           </div>
 
@@ -172,12 +176,13 @@ const Index = () => {
                   <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">
                     {product.name}
                   </h3>
+                  <p className="text-sm text-muted-foreground mb-3">{product.specs}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold bg-gradient-to-r from-[hsl(var(--cosmic-gold))] to-[hsl(var(--cosmic-gold-dark))] bg-clip-text text-transparent">
                       {product.price}
                     </span>
                     <Button size="sm" className="bg-gradient-to-r from-primary to-accent text-white hover:opacity-90">
-                      Add to Cart
+                      View Details
                     </Button>
                   </div>
                 </div>
@@ -200,8 +205,8 @@ const Index = () => {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=800&fit=crop" 
-                  alt="Coffee brewing"
+                  src="https://images.unsplash.com/photo-1610432990145-a2d35d3fe2c6?w=800&h=800&fit=crop" 
+                  alt="Professional Blender"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -210,33 +215,33 @@ const Index = () => {
 
             <div>
               <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
-                Our Story
+                Why Choose Us
               </Badge>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Crafted with
-                <span className="bg-gradient-to-r from-[hsl(var(--cosmic-gold))] to-[hsl(var(--cosmic-gold-dark))] bg-clip-text text-transparent"> Passion</span>
+                Your Trusted
+                <span className="bg-gradient-to-r from-[hsl(var(--cosmic-gold))] to-[hsl(var(--cosmic-gold-dark))] bg-clip-text text-transparent"> Blender Partner</span>
               </h2>
               
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                At HubKochab, we believe every cup of coffee should be an extraordinary experience. Our journey began with a simple mission: to bring the universe's finest flavors to your morning ritual.
+                HubKochab is an authorized retailer and wholesaler specializing in premium Blendtec and Vitamix blenders. We provide top-tier blending solutions for homes, restaurants, juice bars, and commercial kitchens.
               </p>
               
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                From sourcing the rarest beans across the globe to our meticulous roasting process, we ensure every blend captures the cosmic essence of flavor perfection.
+                With years of expertise and direct partnerships with leading manufacturers, we deliver authentic products backed by full warranties, competitive pricing, and exceptional customer service.
               </p>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[hsl(var(--cosmic-gold))] to-[hsl(var(--cosmic-gold-dark))]" />
-                  <span className="text-foreground font-medium">100% Ethically Sourced Beans</span>
+                  <span className="text-foreground font-medium">Authorized Dealer - Full Warranties</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[hsl(var(--cosmic-gold))] to-[hsl(var(--cosmic-gold-dark))]" />
-                  <span className="text-foreground font-medium">Small-Batch Artisan Roasting</span>
+                  <span className="text-foreground font-medium">Wholesale & Retail Pricing Available</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[hsl(var(--cosmic-gold))] to-[hsl(var(--cosmic-gold-dark))]" />
-                  <span className="text-foreground font-medium">Sustainable Packaging</span>
+                  <span className="text-foreground font-medium">Expert Support & Fast Shipping</span>
                 </div>
               </div>
 
@@ -257,20 +262,18 @@ const Index = () => {
           <div className="max-w-3xl mx-auto text-center">
             <Sparkles className="w-16 h-16 text-white mx-auto mb-6" />
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Join the Cosmic Coffee Community
+              Ready to Upgrade Your Blending?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Subscribe to get exclusive blends, early access to new releases, and cosmic brewing tips.
+              Get in touch for wholesale pricing, product recommendations, or to place your order today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-[hsl(var(--cosmic-gold))]"
-              />
               <Button size="lg" className="bg-gradient-to-r from-[hsl(var(--cosmic-gold))] to-[hsl(var(--cosmic-gold-dark))] text-primary-foreground hover:opacity-90 px-8">
-                Subscribe
+                Request Wholesale Quote
+              </Button>
+              <Button size="lg" variant="outline" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm px-8">
+                Contact Sales
               </Button>
             </div>
           </div>
@@ -287,27 +290,27 @@ const Index = () => {
                 <span className="text-xl font-bold">HubKochab</span>
               </div>
               <p className="text-white/70 text-sm">
-                Crafting cosmic coffee experiences since day one.
+                Your trusted source for professional blending equipment.
               </p>
             </div>
             
             <div>
               <h4 className="font-semibold mb-4">Shop</h4>
               <ul className="space-y-2 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white transition-colors">All Products</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Bestsellers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">New Arrivals</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Gift Sets</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Blendtec Models</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Vitamix Models</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Accessories</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Compare Products</a></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">About</h4>
+              <h4 className="font-semibold mb-4">Resources</h4>
               <ul className="space-y-2 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white transition-colors">Our Story</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Sustainability</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Brewing Guide</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Wholesale Inquiry</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Product Guides</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Warranty Info</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
               </ul>
             </div>
             
@@ -323,7 +326,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-white/10 pt-8 text-center text-sm text-white/60">
-            <p>© 2024 HubKochab. All rights reserved. Crafted with ☕ and ✨</p>
+            <p>© 2024 HubKochab. Authorized Blendtec & Vitamix Dealer. All rights reserved.</p>
           </div>
         </div>
       </footer>
