@@ -7,9 +7,9 @@ const Index = () => {
   const products = [
     {
       id: 1,
-      name: "Blendtec Connoisseur C825",
-      price: "$799.99",
-      image: "https://images.unsplash.com/photo-1570831739435-6601aa3fa4fb?w=500&h=500&fit=crop",
+      name: "Blendtec Connoisseur C825 Commercial Blender",
+      price: "$1077.14",
+      image: "https://m.media-amazon.com/images/I/71keKL4s7GL._AC_SL1500_.jpg",
       tag: "Bestseller",
       specs: "3.8 HP Motor | 100+ Cycles"
     },
@@ -23,9 +23,9 @@ const Index = () => {
     },
     {
       id: 3,
-      name: "Blendtec Professional 800",
-      price: "$549.99",
-      image: "https://images.unsplash.com/photo-1584990347449-39e5b0835163?w=500&h=500&fit=crop",
+      name: "Blendtec Connoissseur 825 Space Saver Commercial Blender",
+      price: "$799.95,
+      image: "https://i.ebayimg.com/images/g/cFAAAOSwgV1dsa~f/s-l1600.webp",
       tag: "Pro Choice",
       specs: "3.8 HP Motor | Touch Screen"
     },
