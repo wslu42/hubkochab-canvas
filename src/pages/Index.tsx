@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, ShoppingBag, Zap, Star, Award, Truck } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Index = () => {
   const products = [
@@ -52,10 +53,7 @@ const Index = () => {
       <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Sparkles className="w-6 h-6 text-primary" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              HubKochab
-            </span>
+            <img src={logo} alt="Kochab" className="h-12 w-auto" />
           </div>
           <div className="hidden md:flex items-center gap-8">
             <a href="#shop" className="text-foreground hover:text-primary transition-colors font-medium">Shop</a>
@@ -286,8 +284,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Sparkles className="w-6 h-6" />
-                <span className="text-xl font-bold">HubKochab</span>
+                <img src={logo} alt="Kochab" className="h-16 w-auto brightness-0 invert" />
               </div>
               <p className="text-white/70 text-sm">
                 Your trusted source for professional blending equipment.
