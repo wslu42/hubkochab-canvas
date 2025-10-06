@@ -24,7 +24,7 @@ const Index = () => {
     {
       id: 3,
       name: "Blendtec Connoissseur 825 Space Saver Commercial Blender",
-      price: "$799.95,
+      price: "$799.95",
       image: "https://i.ebayimg.com/images/g/cFAAAOSwgV1dsa~f/s-l1600.webp",
       tag: "Pro Choice",
       specs: "3.8 HP Motor | Touch Screen"
