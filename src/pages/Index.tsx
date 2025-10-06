@@ -17,7 +17,7 @@ const Index = () => {
       id: 2,
       name: "Vitamix E310 Explorian",
       price: "$349.95",
-      image: "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500&h=500&fit=crop",
+      image: "https://qvc.scene7.com/is/image/QVC/k/77/k92777_172.102?$aempdlarge80$",
       tag: "Popular",
       specs: "2.0 HP Motor | 48 oz Container"
     },
