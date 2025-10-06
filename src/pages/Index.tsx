@@ -291,10 +291,12 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
+
               <div className="flex items-center gap-2 mb-4">
-                <Sparkles className="w-6 h-6" />
+                <img src="/logo.svg" alt="HubKochab" className="h-6 w-auto" />
                 <span className="text-xl font-bold">HubKochab</span>
               </div>
+
               <p className="text-white/70 text-sm">
                 Your trusted source for professional blending equipment.
               </p>
