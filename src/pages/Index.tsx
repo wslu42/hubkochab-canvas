@@ -33,7 +33,7 @@ const Index = () => {
       id: 4,
       name: "Vitamix A3500 Ascent",
       price: "$649.95",
-      image: "https://images.unsplash.com/photo-1610432990145-a2d35d3fe2c6?w=500&h=500&fit=crop",
+      image: "https://assets.katomcdn.com/q_auto,f_auto,w_500,dpr_2/v1552997228/products/026/026-061005/026-061005.jpg",
       tag: "Premium",
       specs: "Self-Detect Technology"
     }
