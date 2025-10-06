@@ -51,12 +51,18 @@ const Index = () => {
       {/* Navigation */}
       <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-6 h-6 text-primary" />
+
+          <a href="/" className="flex items-center gap-2">
+            <img
+              src="/logo.svg"           // or "/logo.png"
+              alt="HubKochab"
+              className="h-7 w-auto"    // tweak size: h-6 / h-8 / h-10
+            />
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               HubKochab
             </span>
-          </div>
+          </a>
+
           <div className="hidden md:flex items-center gap-8">
             <a href="#shop" className="text-foreground hover:text-primary transition-colors font-medium">Shop</a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
