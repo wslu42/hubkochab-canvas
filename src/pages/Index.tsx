@@ -9,7 +9,7 @@ const Index = () => {
       id: 1,
       name: "Blendtec Connoisseur C825 Commercial Blender",
       price: "$1077.14",
-      image: "https://m.media-amazon.com/images/I/71keKL4s7GL._AC_SL1500_.jpg",
+      image: "https://i.shgcdn.com/e2f745e4-3e93-4c46-a7ce-9b4c95cc3e53/-/format/auto/-/preview/3000x3000/-/quality/lighter/",
       tag: "Bestseller",
       specs: "3.8 HP Motor | 100+ Cycles"
     },
