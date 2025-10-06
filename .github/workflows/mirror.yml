@@ -1,8 +1,8 @@
-name: Mirror to Public
+name: Mirror to Public Repo
 
 on:
   push:
-    branches: [ main ]   # adjust if needed
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -12,12 +12,32 @@ jobs:
       - name: Checkout private repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # full history for --mirror
+          fetch-depth: 0
 
-      - name: Push --mirror to public repo
+      # OPTIONAL: publish only selected files (uncomment & adjust)
+      # - name: Prepare safe publish folder
+      #   run: |
+      #     rm -rf publish && mkdir publish
+      #     cp -r src public package.json tsconfig.json vite.config.ts tailwind.config.ts postcss.config.js README.md publish/
+      #     echo "Prepared publish folder"
+
+      - name: Init and push to public repo (main branch only)
+        env:
+          DEST: https://x-access-token:${{ secrets.MIRROR_TOKEN }}@github.com/wslu42/hubkochab-canvas-mirror.git
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git remote add public https://x-access-token:${{ secrets.MIRROR_TOKEN }}@github.com/wslu42/hubkochab-canvas-mirror.git
-          # Push EVERYTHING (branches, tags). Remove --mirror if you only want main.
-          git push --force --mirror public
+          # choose one of the two approaches:
+
+          ## A) Mirror WHOLE repo history (but only main), simplest
+          git remote add public "$DEST"
+          git push -f public main:main
+
+          ## B) If using the 'publish' folder (safe subset), use this instead:
+          # cd publish
+          # git init
+          # git config user.name "github-actions[bot]"
+          # git config user.email "github-actions[bot]@users.noreply.github.com"
+          # git add .
+          # git commit -m "Sync selected files from private repo"
+          # git branch -M main
+          # git remote add origin "$DEST"
+          # git push -f origin main
